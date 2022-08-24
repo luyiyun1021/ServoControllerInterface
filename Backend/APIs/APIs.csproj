@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Beckhoff.TwinCAT.Ads" Version="6.0.187" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Opc.UaFx.Client" Version="2.27.0" />
+    <PackageReference Include="EasyModbusTCP" Version="5.6.0" />
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="models\" />
+    <None Remove="Opc.UaFx.Client" />
+    <None Remove="HugConfig\" />
+    <None Remove="TimerFeatures\" />
+    <None Remove="EasyModbusTCP" />
+    <None Remove="System.IO.Ports" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HugConfig\" />
+    <Folder Include="TimerFeatures\" />
+  </ItemGroup>
+</Project>

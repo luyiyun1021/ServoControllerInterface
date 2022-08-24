@@ -1,0 +1,58 @@
+<p>msgtable loaded</p>
+
+
+<table datatable [dtOptions]="dtOptions" class="row-border hover">
+    <thead>
+        <tr>
+            <th>名称</th>
+            <th>传感器编号</th>
+            <th>时间</th>
+            <th>对象类型</th>
+            <th>地址</th>
+        </tr>
+    </thead>
+
+    <ng-container *ngIf="status === 1; else second">
+        <tbody>
+            <tr *ngFor="let msglist of signalRService.data" (click)="setHighlight(msglist.id)" [ngClass]="{'selected': msglist.id === selectedItem}">
+                <td>{{ msglist.name }}</td>
+                <td>{{ msglist.sensorNo }}</td>
+                <td>{{ msglist.time }}</td>
+                <td>{{ msglist.objectType }}</td>
+                <td>{{ msglist.address }}</td>
+            </tr>
+        </tbody>
+    </ng-container>
+
+
+    <ng-template #second>
+        <ng-container *ngIf="status === 2; else third">
+            <tbody *ngFor="let msglist of signalRService.data">
+                <tr *ngIf="msglist.visibility" (click)="setHighlight(msglist.id)" [ngClass]="{'selected': msglist.id === selectedItem}">
+                    <td>{{ msglist.name }}</td>
+                    <td>{{ msglist.sensorNo }}</td>
+                    <td>{{ msglist.time }}</td>
+                    <td>{{ msglist.objectType }}</td>
+                    <td>{{ msglist.address }}</td>
+                </tr>
+            </tbody>
+        </ng-container>
+    </ng-template>
+
+    <ng-template #third>
+        <tbody *ngFor="let msglist of signalRService.data">
+            <tr *ngIf="!msglist.visibility" (click)="setHighlight(msglist.id)" [ngClass]="{'selected': msglist.id === selectedItem}">
+                <td>{{ msglist.name }}</td>
+                <td>{{ msglist.sensorNo }}</td>
+                <td>{{ msglist.time }}</td>
+                <td>{{ msglist.objectType }}</td>
+                <td>{{ msglist.address }}</td>
+            </tr>
+        </tbody>
+    </ng-template>
+</table>
+
+<button id="button" (click)="reverseVisibility()">颠倒状态</button>
+<button id="button" (click)="seeDefinedMsgs()">定义的</button>
+<button id="button" (click)="seeCurrentMsgs()">当前的</button>
+<button id="button" (click)="seeBlockedMsgs()">屏蔽的</button>

@@ -1,0 +1,103 @@
+
+
+ .link {
+	color: white;
+}
+
+.link:hover {
+	text-decoration: none;
+}
+
+.phone_iphone_link {
+	display: block;
+
+	img {
+		display: none;
+		z-index: 1001;
+	}
+}
+
+ .phone_iphone_link:hover
+ {
+	img {
+		display: block;
+		position: absolute;
+		left: 50%;
+		margin-left: -60px;
+		top: 30px;
+	}
+ }
+
+
+
+.icon-phone_in_talk::before {
+	content: "\e61d";
+}
+
+.icon-phone_iphone::before {
+	content: "\e325";
+}
+
+.icon-users::before {
+	content: "\e972";
+}
+
+.icon-bubbles::before {
+	content: "\e96c";
+	font-size: 12px;
+}
+
+#m_content_sbub1
+{
+	height: 100%;
+	border-right: 1px dashed white;
+	
+}
+
+#m_content_sbub2
+{
+	border-right: hidden;
+	border-top:1px dashed white;
+	border-bottom:1px dashed white;
+	margin-top: -6%;
+	
+	height: 114%;
+
+
+}
+
+#m_content_sbub3
+{
+	height: 100%;	
+	border-top:1px dashed white;
+	border-bottom:1px dashed white;
+	border-left:1px dashed white;
+	// background: yellowgreen;
+}
+
+#m_content_sbub4
+{
+	height: 100%;
+    background: red;
+}
+
+#m_content_sbub5
+{
+	height: 25%;
+
+   margin-left: -15px;
+   margin-right: -15px;
+   
+}
+
+#m_content_sbub6
+{
+	border-top:1px dashed white;
+	height: 75%;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+
+
+

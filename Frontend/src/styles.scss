@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  font-family: Microsoft YaHei;  //定义字体
+  font-size:medium;
+  color: white;
+
+  background: #3e4349;
+
+  overflow-x: hidden; //隐藏左右滚动条
+  overflow-y: hidden; //隐藏上下滚动条
+}
+
+
+
+//在总的样式中，引入bootstrap 黎志 20220321
+@import url(../node_modules/bootstrap-3.4.1-dist/css/bootstrap.min.css);
+
+
+//在总的样式中，引入矢量图标 黎志 20220321
+/*声明字体*/
+/* 可以到网上下载，然后添加到assets/font/icomoon.svg文件中 */
+/* icommon字体图标，见icomoon.io */
+@font-face {
+	font-family: "fontfamily_icomoon";
+	src: url('./assets/font/icomoon.eot') format('embedded-opentype'), 
+  url("./assets/font/icomoon.svg") format('svg'), 
+  url('./assets/font/icomoon.ttf') format('truetype'),
+   url("./assets/font/icomoon.woff") format('woff');
+}
+
+//字体图标胡通配选择器
+[class^="icon-"],
+[class*=" icon-"] {
+	font-family: fontfamily_icomoon;
+	color:white;
+	/*让字体图标斜体形式变为正常*/
+	font-style: normal;
+}
+
+
+.m_header
+{
+    //高度由内层的元素确认
+  border:1px dashed white;
+  border-bottom: hidden;
+  height: 160px;
+}
+
+.m_content
+{
+  height: 660px;	
+  //高度由内层的元素确认
+	border-right:1px dashed white;	
+	border-left:1px dashed white;	
+
+  border-top: hidden;
+  border-bottom: hidden;
+
+ 
+}
+
+

@@ -1,0 +1,47 @@
+{
+    "data": [
+      {
+        "name": "传感器诊断: 2N50J101 CH04 2S519",
+        "sensorNo": "2S519",
+        "time": "8:22",
+        "objectType": "S",
+        "address": 5
+      },
+      {
+        "name": "传感器诊断: 2N50J110 CH05 2S514",
+        "sensorNo": "2S514",
+        "time": "8:22",
+        "objectType": "S",
+        "address": 4
+      },
+      {
+        "name": "2号轮至3号轮堵塞",
+        "sensorNo": "2S514",
+        "time": "8:22",
+        "objectType": "S",
+        "address": 3
+      },
+      {
+        "name": "传感器诊断: 2N50J105 CH06 2S435",
+        "sensorNo": "2S435",
+        "time": "8:22",
+        "objectType": "S",
+        "address": 2
+      },
+      {
+        "name": "商标纸部件油位检测失效",
+        "sensorNo": "2S435",
+        "time": "8:22",
+        "objectType": "S",
+        "address": 1
+      },
+      {
+        "name": "商标纸部件油位不足",
+        "sensorNo": "2S435",
+        "time": "8:22",
+        "objectType": "S",
+        "address": 0
+      }
+     
+    ]
+  }

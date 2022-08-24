@@ -1,0 +1,155 @@
+<div class="container-fluid">
+  <div class="row m_header">
+    <div class="col-lg-4  col-lx-4" >
+          <img src="assets/images/logo_STMC.png"  style="width: 350px;height: 55px;"/> 
+    </div>
+
+    <div class="col-lg-1 col-lx-1">
+        <p>200</p>
+        <p>相位</p>    
+    </div>
+
+    <div class="col-lg-1 col-lx-1">
+        <p>300</p>
+        <p>产量</p>
+    </div>
+
+    <div class="col-lg-1 col-lx-1">
+     
+        <p>400</p>
+        <p>总剔除</p>
+ 
+    </div>
+
+    <div class="col-lg-1 col-lx-1" >
+    
+        <p><i class="icon-users"></i> </p>
+
+       <!-- <span class="glyphicon glyphicon-plus" style="margin-bottom: 11px;"></span> -->
+       
+        <p>专家</p>
+         
+    </div>
+
+    <div class="col-lg-1 col-lx-1" id="m_content_sbub1" >
+     
+        <p>OK</p>
+        <p>PLC通信状态</p>
+    </div>
+
+    <div class="col-lg-3 col-lx-3"  id="m_content_sbub4" >
+      此区域放报警信息
+      <!-- <hr>
+      <hr>
+      <hr>
+      <hr>
+      <hr> -->
+    </div>
+  </div>
+</div>
+
+
+  <div class="container-fluid" >
+    <div class="row  m_content">
+
+     <div class="col-lg-9  col-lx-9" id="m_content_sbub2"> 
+
+        <div style="height: 4%; text-align: end;margin-right: -10px;" >
+          2022-04-01 20:17:00
+        </div>
+          
+        <span> <!-- style="display: none;" 隐藏-->
+          <div style="height: 88%;margin-left: -15px;margin-right:-10px;">
+            此区域放3D模型,它们不带Menu.   
+            <router-outlet></router-outlet>
+          </div>
+
+          <div class="btn-group " style="margin-left: -15px;margin-right: -10px;"> 
+             <button class="btn btn-default" [routerLink]="[{outlets:{primary:'news',region_machines:'regionmac'}}]">
+              <span class="glyphicon glyphicon-ok"></span>
+              <br/>
+              图标按键1
+             </button>
+
+             <button class="btn btn-default"  [routerLink]="[{outlets:{primary:'form',region_machines:'todolist'}}]" >
+              <span class="glyphicon glyphicon-plus"></span>
+              <br/>
+              图标按键2
+             </button>
+
+             <button class="btn btn-default"  [routerLink]="[{outlets:{primary:'message/Message_Msgtable',region_machines:'regionmac'}}]" >  <!--  [routerLink]="[{outlets:{primary:'home',region_machines:'regionmac'}}]" -->
+              <span class="glyphicon glyphicon-edit"></span>
+              <br/>
+              信息
+             </button>
+
+             <button class="btn btn-default"   [routerLink]="[{outlets:{primary:'menu/menu_loginoperation',region_machines:'regionmac'}}]" >
+              <span class="glyphicon glyphicon-plus"></span>
+              <br/>
+              图标按键4
+             </button>
+              
+             <button class="btn btn-default"   [routerLink]="[{outlets:{primary:'information/information_Alarmmessge',region_machines:'regionmac'}}]">
+              <span class="glyphicon glyphicon-asterisk"></span>
+              <br/>
+              图标按键5
+             </button>
+
+             <button class="btn btn-default"   [routerLink]="[{outlets:{primary:'io/io_ethercattopologyhost',region_machines:'regionmac'}}]">
+              <span class="glyphicon glyphicon-upload"></span>
+              <br/>
+              图标按键6
+             </button>
+
+             <button class="btn btn-default"    [routerLink]="[{outlets:{primary:'heater/heater_Fineturningheater',region_machines:'regionmac'}}]">
+              <span class="glyphicon glyphicon-camera"></span>
+              <br/>
+              图标按键7
+             </button>
+
+             <button class="btn btn-default"  [routerLink]="[{outlets:{primary:'service/service_Selector',region_machines:'regionmac'}}]">
+              <span class="glyphicon glyphicon-cog"></span>
+              <br/>
+              图标按键8
+             </button>
+
+             <button class="btn btn-default"  [routerLink]="[{outlets:{primary:'instrument/Instrument_Statetable',region_machines:'regionmac'}}]">
+              <span class="glyphicon glyphicon-align-left"></span>
+              <br/>
+              图标按键9
+             </button>
+
+             <button class="btn btn-default"   [routerLink]="[{outlets:{primary:'statistics/statistic_Machineperformancestatistics',region_machines:'regionmac'}}]">
+              <span class="glyphicon glyphicon-file"></span>
+              <br/>
+              图标按键10
+             </button>
+
+             
+          </div>         
+
+        </span>
+        
+        <div style="display: none; height: 97%; margin-left: -15px; margin-right: -10px;">
+          此区域放其他2D组件模型,它们带Menu
+        </div>
+          
+      </div>
+
+      <div class="col-lg-3 col-lx-3"   id="m_content_sbub3">
+        
+          <div id="m_content_sbub5">
+            <!-- Machines区域 -->
+            <router-outlet name="region_machines"></router-outlet>
+          </div>
+          <div   id="m_content_sbub6">
+            Groups区域
+          </div>
+      </div>
+
+    </div>
+  
+  
+  </div>
+
+
